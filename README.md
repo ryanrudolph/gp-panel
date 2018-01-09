@@ -1,4 +1,4 @@
-#=== GetPhound Admin Panel ===
+#GetPhound Admin Panel
 Contributors: ryanrudolph
 Tags: internal, branding, customer service
 Requires at least: 3.0.1
