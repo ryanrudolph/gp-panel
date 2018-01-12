@@ -17,6 +17,8 @@ Simple internal plugin for restricting priviledges and adding GetPhound branding
 
 ## Description
 
+Adds Welcome panel to Dashboard with GetPhound project manager contact information. Removes high level admin options including plugins, theme editor, etc.
+
 Intended for clients hosting with us. Recommended installation post launch.
 
 ## Installation
