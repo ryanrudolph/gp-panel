@@ -1,13 +1,13 @@
 # GetPhound Admin Panel
 Contributors: ryanrudolph
 
-Tags: internal, branding, customer service
+Tags: internal, branding, customer service, dashboard, admin
 
-Requires at least: 3.0.1
+Requires at least: 4.0.1
 
-Tested up to: 4.3
+Tested up to: 4.9.1
 
-Stable tag: 4.3
+Stable tag: 4.9
 
 License: GPLv2 or later
 
@@ -17,7 +17,7 @@ Simple internal plugin for restricting priviledges and adding GetPhound branding
 
 ## Description
 
-Adds Welcome panel to Dashboard with GetPhound project manager contact information. Removes high level admin options including plugins, theme editor, etc.
+Adds Welcome panel to Dashboard with GetPhound project manager contact information. Customizes login screen and admin panels with GetPhound branding. Removes high level admin options including plugins, theme editor, etc. 
 
 Intended for clients hosting with us. Recommended installation post launch.
 
@@ -30,6 +30,3 @@ Intended for clients hosting with us. Recommended installation post launch.
 
 = 1.0 =
 * Coming soon.
-
-= 0.5 =
-* Initial release.
