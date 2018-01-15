@@ -183,3 +183,17 @@ function hide_update_notice() {
     remove_all_actions( 'admin_notices' );
 }
 add_action( 'admin_head', 'hide_update_notice', 1 );
+
+// Add GetPhound color scheme
+function gp_admin_color_schemes() {
+	
+	$theme_dir = get_stylesheet_directory_uri();
+
+	wp_admin_css_color( 
+		'getphound', __( 'GetPhound' ),
+		$theme_dir . '/css/getphound/colors.css',
+		array( '#384047', '#5BC67B', '#838cc7', '#ffffff' )
+	);
+	
+}
+add_action('admin_init', 'gp_admin_color_schemes');
