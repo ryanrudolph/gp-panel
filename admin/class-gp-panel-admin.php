@@ -107,17 +107,18 @@ Customize Dashboard
 -------------------------------------------------------------------- */
 function gp_welcome_panel() {
 	echo '<div class="gp-dash-credit">';
-	if (get_header_image()) {
-		echo '<img src="' . esc_url( get_header_image() ). '" alt="' . esc_attr( get_bloginfo( 'title' ) ) . '" />';
-	}
-	echo '<h3>Welcome to <strong>' . esc_attr( get_bloginfo( 'title' ) ) . '</strong> Content Management System</h3>';
-	echo 'Designed and Developed by getphound.com';
-	echo '<a href="https://getphound.com/" target="_blank" class="gp-logo"><img src="https://getphound.com/wp-content/themes/getphound/images/logo.png" alt="GetPhound" /></a>';
-	echo 'For questions or technical support call (610) 999-1808 or email <a href="mailto:josh@getphound.com">josh@getphound.com</a>.';
+		if (get_header_image()) {
+			echo '<img src="' . esc_url( get_header_image() ). '" alt="' . esc_attr( get_bloginfo( 'title' ) ) . '" />';
+		}
+		echo '<h3>Welcome to <strong>' . esc_attr( get_bloginfo( 'title' ) ) . '</strong> Content Management System</h3>';
+		echo 'Designed and Developed by getphound.com';
+		echo '<a href="https://getphound.com/" target="_blank" class="gp-logo"><img src="https://getphound.com/wp-content/themes/getphound/images/logo.png" alt="GetPhound" /></a>';
+		echo 'For questions or technical support call (610) 999-1808 or email <a href="mailto:josh@getphound.com">josh@getphound.com</a>.';
 	echo '</div>';
 }
 remove_action('welcome_panel','wp_welcome_panel');
 add_action('welcome_panel','gp_welcome_panel'); 
+
 /* --------------------------------------------------------------------
 Remove Widgets on Dashboard
 -------------------------------------------------------------------- */
@@ -135,6 +136,7 @@ function gp_remove_dashboard_widgets() {
 	remove_meta_box( 'yoast_db_widget', 'dashboard', 'normal'); // Yoast
 }
 add_action('wp_dashboard_setup', 'gp_remove_dashboard_widgets' );
+
 /* --------------------------------------------------------------------
 Remove Unwanted Menu Items from WordPress Admin
 -------------------------------------------------------------------- */
@@ -158,6 +160,7 @@ function gp_remove_admin_menus (){
 	}
  
 }
+
 // Add our function to the admin_menu action
 add_action('admin_menu', 'gp_remove_admin_menus');
 // Remove WordPress Admin Bar Menu Items
@@ -187,13 +190,18 @@ add_action( 'admin_head', 'hide_update_notice', 1 );
 // Add GetPhound color scheme
 function gp_admin_color_schemes() {
 	
-	$theme_dir = get_stylesheet_directory_uri();
+	$plugins_url = plugin_dir_url( __FILE__ );
 
 	wp_admin_css_color( 
 		'getphound', __( 'GetPhound' ),
-		$theme_dir . '/css/getphound/colors.css',
-		array( '#384047', '#5BC67B', '#838cc7', '#ffffff' )
+		$plugins_url . 'css/getphound/colors.css',
+		array( '#333333', '#555555', '#9e2916', '#CCC' )
 	);
 	
 }
 add_action('admin_init', 'gp_admin_color_schemes');
+
+add_action('wp_head', 'debug');
+function debug() {
+	echo plugin_dir_url( __FILE__ ) . 'css/getphound/colors.css';
+}
