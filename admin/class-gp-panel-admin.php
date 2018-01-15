@@ -103,6 +103,39 @@ class Gp_Panel_Admin {
 }
 
 /* --------------------------------------------------------------------
+Customize Login
+-------------------------------------------------------------------- */
+function gp_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url('https://getphound.com/wp-content/themes/getphound/images/logo.png');
+			height:59px;
+			width:378px;
+			background-size: 378px 59px;
+			background-repeat: no-repeat;
+        	padding-bottom: 30px;
+        	margin-left: -30px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'gp_login_logo' );
+
+function gp_login_logo_url() {
+    return 'https://getphound.com';
+}
+add_filter( 'login_headerurl', 'gp_login_logo_url' );
+
+function gp_login_logo_url_title() {
+    return 'GetPhound | Online Marketing Company';
+}
+add_filter( 'login_headertitle', 'gp_login_logo_url_title' );
+
+function my_login_stylesheet() {
+    wp_enqueue_style( 'custom-login', plugin_dir_url( __FILE__ ) . 'css/style-login.css' );
+}
+add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
+
+/* --------------------------------------------------------------------
 Customize Dashboard
 -------------------------------------------------------------------- */
 function gp_welcome_panel() {
@@ -218,6 +251,6 @@ add_action('admin_init', 'gp_admin_color_schemes');
 add_action('wp_head', 'debug');
 function debug() {
 
-	echo plugin_dir_url( __FILE__ ) . 'css/getphound/colors.css';
+	echo plugin_dir_url( __FILE__ ) . 'css/style-login.css';
 
 }
