@@ -264,6 +264,10 @@ function gp_admin_color_schemes() {
 	
 }
 add_action('admin_init', 'gp_admin_color_schemes');
+add_filter( 'get_user_option_admin_color', function( $color_scheme ) {
+$color_scheme = 'getphound';
+return $color_scheme;
+}, 5 );
 
 // Admin footer modification
 function remove_footer_admin() {
