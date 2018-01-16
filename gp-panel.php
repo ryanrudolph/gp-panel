@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       GetPhound Panel
  * Plugin URI:        https://getphound.com
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       Internal plugin for restricting priviledges and adding GetPhound branding.
  * Version:           1.0.0
  * Author:            Ryan Rudolph
  * Author URI:        https://getphound.com

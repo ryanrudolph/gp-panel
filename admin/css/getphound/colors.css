@@ -497,3 +497,7 @@ div#wp-responsive-toggle a:before {
 .mce-container.mce-menu .mce-menu-item-preview.mce-active {
   background: #9e2916;
 }
+
+.wp-menu-image.svg {
+  filter: grayscale(100%);
+}
