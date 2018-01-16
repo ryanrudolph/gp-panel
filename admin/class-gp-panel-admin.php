@@ -18,7 +18,7 @@
  *
  * @package    Gp_Panel
  * @subpackage Gp_Panel/admin
- * @author     Ryan Rudolph <getphound@gmail.com>
+ * @author     Ryan Rudolph <ryan@ryanrudolph.com>
  */
 class Gp_Panel_Admin {
 
@@ -145,7 +145,7 @@ function gp_welcome_panel() {
 			echo '<img src="' . esc_url( get_header_image() ). '" alt="' . esc_attr( get_bloginfo( 'title' ) ) . '" />';
 		}
 		echo '<h3>Welcome to <strong>' . esc_attr( get_bloginfo( 'title' ) ) . '</strong> Content Management System</h3>';
-		echo 'Designed and Developed by getphound.com';
+		echo 'Designed and Developed by <a href="https://getphound.com">getphound.com</a>.';
 		echo '<a href="https://getphound.com/" target="_blank" class="gp-logo"><img src="https://getphound.com/wp-content/themes/getphound/images/logo.png" alt="GetPhound" /></a>';
 		echo 'For questions or technical support call (610) 897 8127 or email <a href="mailto:josh@getphound.com">josh@getphound.com</a>.';
 	echo '</div>';
@@ -237,6 +237,13 @@ function gp_admin_color_schemes() {
 	
 }
 add_action('admin_init', 'gp_admin_color_schemes');
+
+// Admin footer modification
+function remove_footer_admin() {
+    echo '<span id="footer-thankyou">Thank you for using <a href="https://www.getphound.com" target="_blank">GetPhound</a>.</span>';
+}
+ 
+add_filter('admin_footer_text', 'remove_footer_admin');
 
 
 // For debugging - REMOVE WHEN DONE
