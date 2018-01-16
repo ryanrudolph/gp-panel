@@ -25,8 +25,3 @@ Intended for clients hosting with us. Recommended installation post launch.
 
 1. Upload `gp-panel.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-
-### Changelog
-
-= 1.0 =
-* Coming soon.

@@ -1,7 +1,7 @@
 === GetPhound Admin Panel ===
 Contributors: ryanrudolph
 Tags: internal, branding, customer service
-Requires at least: 3.0.1
+Requires at least: 4.0.1
 Tested up to: 4.3
 Stable tag: 4.3
 License: GPLv2 or later
@@ -17,11 +17,3 @@ Adds Welcome panel to Dashboard with GetPhound project manager contact informati
 
 1. Upload `gp-panel.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-
-== Changelog ==
-
-= 1.0 =
-* Coming soon.
-
-= 0.5 =
-* Initial release.
