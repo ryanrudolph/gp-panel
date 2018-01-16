@@ -178,6 +178,28 @@ function gp_remove_dashboard_widgets() {
 add_action('wp_dashboard_setup', 'gp_remove_dashboard_widgets' );
 
 /* --------------------------------------------------------------------
+Add Widget On Dashboard
+-------------------------------------------------------------------- */
+function example_add_dashboard_widgets() {
+
+	wp_add_dashboard_widget(
+                 'general_help_widget',         // Widget slug.
+                 'Looking For General Help Editing Your Site?',         // Title.
+                 'general_help_widget_function' // Display function.
+        );	
+}
+add_action( 'wp_dashboard_setup', 'example_add_dashboard_widgets' );
+
+/**
+ * Create the function to output the contents of our Dashboard Widget.
+ */
+function general_help_widget_function() {
+
+	// Display whatever it is you want to show.
+	echo '<p><a href="https://codex.wordpress.org/Writing_Posts">Guide To Writing Posts</a></p>';
+}
+
+/* --------------------------------------------------------------------
 Remove Unwanted Menu Items from WordPress Admin
 -------------------------------------------------------------------- */
 function gp_remove_admin_menus (){ 
@@ -191,6 +213,11 @@ function gp_remove_admin_menus (){
 	remove_submenu_page( 'themes.php', 'theme-editor.php');
 	remove_menu_page('tools.php'); // Tools
 	remove_menu_page('options-general.php'); // Settings
+
+	// Third-Party Plugins
+	remove_menu_page('edit.php?post_type=acf-field-group'); // ACF
+	remove_menu_page('/admin.php?page=cptui_manage_post_types'); // CPT UI
+	remove_menu_page('admin.php?page=wpseo_dashboard'); // Yoast
 }
 
 // Add our function to the admin_menu action
@@ -244,12 +271,3 @@ function remove_footer_admin() {
 }
  
 add_filter('admin_footer_text', 'remove_footer_admin');
-
-
-// For debugging - REMOVE WHEN DONE
-add_action('wp_head', 'debug');
-function debug() {
-
-	echo plugin_dir_url( __FILE__ ) . 'css/style-login.css';
-
-}
