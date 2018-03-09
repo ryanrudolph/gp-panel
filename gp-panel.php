@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              https://getphound.com
- * @since             1.0.0
+ * @since             0.5
  * @package           Gp_Panel
  *
  * @wordpress-plugin
  * Plugin Name:       GetPhound Panel
  * Plugin URI:        https://getphound.com
  * Description:       Internal plugin for restricting priviledges and adding GetPhound branding.
- * Version:           1.0.0
+ * Version:           0.5
  * Author:            Ryan Rudolph
  * Author URI:        https://getphound.com
  * License:           GPL-2.0+
