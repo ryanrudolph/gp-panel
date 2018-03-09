@@ -208,9 +208,10 @@ function gp_remove_admin_menus (){
 	remove_menu_page('link-manager.php'); // Links
 	remove_menu_page('edit-comments.php'); // Comments
 	remove_menu_page('plugins.php'); // Plugins
-	remove_submenu_page( 'themes.php', 'customize.php' );
+	remove_submenu_page( 'themes.php', 'customize.php' ); // Doesn't work for some reason
 	remove_submenu_page( 'themes.php', 'themes.php' );
-	remove_submenu_page( 'themes.php', 'theme-editor.php');
+	remove_submenu_page( 'themes.php', 'theme-editor.php'); // Doesn't work for some reason
+	remove_submenu_page( 'themes.php', 'theme-editor.php' );
 	remove_menu_page('tools.php'); // Tools
 	remove_menu_page('options-general.php'); // Settings
 
@@ -221,7 +222,7 @@ function gp_remove_admin_menus (){
 }
 
 // Add our function to the admin_menu action
-add_action('admin_menu', 'gp_remove_admin_menus');
+add_action('admin_init', 'gp_remove_admin_menus');
 
 // Remove WordPress Admin Bar Menu Items
 function wpcustom_admin_bar() {
