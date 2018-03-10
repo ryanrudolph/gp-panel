@@ -25,3 +25,7 @@ Intended for clients hosting with us. Recommended installation post launch.
 
 1. Upload `gp-panel.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
+
+## How To Deactivate Once Active
+
+Go to yourdomain.com/wp-admin/plugins.php
