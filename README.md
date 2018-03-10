@@ -13,7 +13,7 @@ License: GPLv2 or later
 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Simple internal plugin for restricting priviledges and adding GetPhound branding.
+Simple internal plugin for restricting privileges and adding GetPhound branding.
 
 ## Description
 
