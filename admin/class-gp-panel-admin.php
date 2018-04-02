@@ -145,7 +145,7 @@ function gp_welcome_panel() {
 			echo '<img src="' . esc_url( get_header_image() ). '" alt="' . esc_attr( get_bloginfo( 'title' ) ) . '" />';
 		}
 		echo '<h3>Welcome to <strong>' . esc_attr( get_bloginfo( 'title' ) ) . '</strong> Content Management System</h3>';
-		echo 'Designed and Developed by <a href="https://getphound.com">getphound.com</a>';
+		echo 'Designed and Developed by';
 		echo '<a href="https://getphound.com/" target="_blank" class="gp-logo"><img src="https://getphound.com/wp-content/themes/getphound/images/logo.png" alt="GetPhound" /></a>';
 		echo 'For questions or technical support call (610) 897 8127 or email <a href="mailto:josh@getphound.com">josh@getphound.com</a>';
 	echo '</div>';
